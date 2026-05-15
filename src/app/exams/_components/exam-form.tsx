@@ -84,7 +84,7 @@ export default function ExamForm({ action, submitLabel, exam }: Props) {
               id="school_name"
               name="school_name"
               required
-              defaultValue={exam?.school_name ?? "BURSA ERKEK LİSESİ"}
+              defaultValue={exam?.school_name ?? "BİLGİDORA KURS MERKEZİ"}
               className={inputCls}
             />
           </div>
@@ -97,7 +97,8 @@ export default function ExamForm({ action, submitLabel, exam }: Props) {
               name="school_address"
               required
               defaultValue={
-                exam?.school_address ?? "İbrahimpaşa, Öğreten Sk. No:1, 16010"
+                exam?.school_address ??
+                "Nalbantoğlu, Cami Ar. 2. Sk. No:2 D:1, 16010 Osmangazi/Bursa"
               }
               className={inputCls}
             />
