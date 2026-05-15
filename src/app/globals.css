@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6mm;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Her belge sayfa içinde bölünmesin */
+  .print-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 0 auto;
+  }
+
+  /* Her 3'üncü belgeden sonra yeni sayfa */
+  .print-card:nth-child(3n) {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .print-card:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* Ekranda görünen ayırma boşluklarını yazdırırken sıfırla */
+  .print-stack > * + * {
+    margin-top: 4mm !important;
+  }
 }
