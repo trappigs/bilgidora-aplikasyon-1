@@ -31,13 +31,13 @@ export default function ExamCard({
   return (
     <article className="print-card mx-auto box-border flex h-[85mm] w-[198mm] flex-col gap-1 border border-slate-300 bg-white p-2 text-[9px] leading-tight text-slate-900">
       {/* Üst başlık satırı */}
-      <header className="grid grid-cols-[100px_1fr] items-center gap-2">
+      <header className="grid grid-cols-[130px_1fr] items-center gap-2">
         <div className="flex items-center justify-center">
           <Image
-            src="/bilgidora-logo.svg"
-            alt="Bilgi Dora"
-            width={95}
-            height={40}
+            src="/bilgidora-logo.png"
+            alt="Bilgi Dora Kurs Merkezi"
+            width={125}
+            height={29}
             priority
           />
         </div>

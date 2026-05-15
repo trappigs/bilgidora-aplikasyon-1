@@ -24,10 +24,10 @@ export default async function Home() {
       <header className="flex items-center justify-between gap-6 border-b border-slate-200 pb-6">
         <div className="flex items-center gap-4">
           <Image
-            src="/bilgidora-logo.svg"
-            alt="Bilgi Dora"
-            width={120}
-            height={48}
+            src="/bilgidora-logo.png"
+            alt="Bilgi Dora Kurs Merkezi"
+            width={160}
+            height={38}
             priority
           />
           <div>
